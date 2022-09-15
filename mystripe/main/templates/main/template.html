@@ -1,0 +1,22 @@
+{% load static %}
+<!doctype html>
+<html lang="ru-RU" prefix="og: https://ogp.me/ns# image: http://ogp.me/ns#image" xmlns:og="https://ogp.me/ns">
+
+  <head>
+    <title>{% block main_title %}{% endblock %}</title>
+    <meta name="description" content="{% block main_desc %}{% endblock %}">
+    <meta name="keywords" content="{% block main_keys %}{% endblock %}">
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+  </head>
+
+  <body>
+    <div>
+      {% block main %}
+      {% endblock %}
+    </div>
+  </body>
+
+</html>

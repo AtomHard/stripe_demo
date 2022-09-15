@@ -1,0 +1,23 @@
+{% extends 'main/template.html' %}
+{% load static %}
+
+{% block main_title %}Items List{% endblock %}
+{% block main_desc %}Items List{% endblock %}
+{% block main_keys %}Items, List{% endblock %}
+
+
+{% block main %}
+  <div><h1>Items List:</h1></div>
+
+    {% if items %}
+      <ul>
+      {% for i in items %}
+        <li style="margin-bottom:20px">
+          <a href="{{ i.get_absolute_url }}">{{ i.price }} - {{ i.name }}</a><br>
+          {{ i.description }}
+        </li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+
+{% endblock %}
